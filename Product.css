@@ -51,7 +51,8 @@
   color: #fff;
   font-size: 18px;
   text-decoration: none;
-  margin-left: 35px;
+  padding: 7px;
+  /* margin-left: 35px; */
   transition: 0.3s;
 }
 .navbar a:hover {
@@ -115,7 +116,9 @@ h3{
  font-size: 35px;
 }
 
-
+h5{
+  color: #c0c0c0;
+}
  /* footer css start */
 footer {
  background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
