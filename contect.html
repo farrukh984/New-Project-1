@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ocean Gate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+    background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+    color: white;
+    padding-top: 80px;  /* Adjusts for navbar height */
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <p href="#" class="logo">Ocean Gate</p>
+        <i class='bx bx-menu' s id="menu-icon" style="color: aliceblue;"></i>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="about.html">About</a>
+            <a href="contect.html">Contact</a>
+        </nav>
+    </header>
+    <script>
+      const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+const navbg = document.querySelector('.nav-bg');
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+    navbg.classList.toggle('active');
+});
+    </script>
+        <main>
+            <div class="container">
+                <div class="ffbox">
+                    <div class="ffbox1">
+                        <h1 class="gfg">Ocean Gate</h1>
+                        <h2>Contact Us</h2>
+                        <form id="contactForm" onsubmit="return validateForm()">
+                            <label for="fullName">
+                                <i class="fa fa-solid fa-user" style="margin: 2px;"></i> Full Name:
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required>
+        
+                            <label for="email">
+                                <i class="fa fa-solid fa-envelope" style="margin: 2px;"></i> Email Address:
+                            </label>
+                            <input type="email" id="email" name="email" required>
+        
+                            <label for="mobile">
+                                <i class=" fa fa-solid fa-phone" style="margin: 2px;"></i> Contact No:
+                            </label>
+                            <input type="tel" id="mobile" name="mobile" required>
+        
+                            <label for="msg">
+                                <i class=" fa fa-solid fa-comment" style="margin: 2px;"></i> Write Message:
+                            </label>
+                            <textarea id="msg" name="msg" rows="5" required></textarea>
+        
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="map-div">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509354!2d144.95543131558267!3d-37.81720997975144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773f1d9a6df317!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1613995208949!5m2!1sen!2sau" allowfullscreen="" loading="lazy" width="400" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+      
+    </div>
+  </div>
+  <br><br>
+  <script>
+    function validateForm() {
+        // Get form values
+        const fullName = document.getElementById("fullName").value;
+        const email = document.getElementById("email").value;
+        const mobile = document.getElementById("mobile").value;
+        const msg = document.getElementById("msg").value;
+    
+        // Full Name validation
+        const nameRegex = /^[a-zA-Z.\s]+$/; // Only letters and spaces
+        if (!nameRegex.test(fullName)) {
+            alert("Full Name should only contain letters and spaces.");
+            return false;
+        }
+    
+        // Email validation (basic email regex)
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+    
+        // Mobile validation (basic phone number validation)
+        const mobileRegex = /^[0-9]{10}$/; // 10 digit phone number
+        if (!mobileRegex.test(mobile)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return false;
+        }
+    
+        // Message validation (check if message is not empty)
+        if (msg.trim() === "") {
+            alert("Please write a message.");
+            return false;
+        }
+    
+        return true; // All validations passed
+    }
+    </script>
+  <!-- faqs start -->
+
+  <script>
+    // Function to toggle the FAQ answer visibility
+    function toggleFAQ(faqItem) {
+        // Get all FAQ items
+        const allFAQs = document.querySelectorAll('.faq-item');
+
+        // Loop through all FAQ items and hide the answers
+        allFAQs.forEach(item => {
+            const answer = item.querySelector('p');
+            // If it's not the clicked item, hide it
+            if (item !== faqItem) {
+                answer.style.display = 'none';
+            }
+        });
+
+        // Toggle the clicked item's answer visibility
+        const clickedAnswer = faqItem.querySelector('p');
+        if (clickedAnswer.style.display === 'block') {
+            clickedAnswer.style.display = 'none'; // Close it if it's already open
+        } else {
+            clickedAnswer.style.display = 'block'; // Open it if it's closed
+        }
+    }
+</script>
+<main class="aline">
+    <h1 >Frequently Asked Questions (FAQs)</h1>
+    <p 5>Here are some common questions we receive. If you have more questions, feel free to contact us!</p>
+</main>
+
+<div class="faq-container">
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <h3>What services do you offer?</h3>
+        <p>We provide a wide range of services tailored to meet your needs, including product delivery, customer support, and personalized solutions. Please feel free to check our services section for more details.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <h3>How do I leave a review?</h3>
+        <p>You can easily leave a review by visiting the 'Reviews' section on our homepage. Just enter your name, write your feedback, and click "Submit Review".</p>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <h3>Do you offer customer support?</h3>
+        <p>Yes, we offer 24/7 customer support. You can contact us through our support email or use the contact form on our website.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <h3>Can I get a refund?</h3>
+        <p>Refunds are available depending on the type of service or product. Please refer to our refund policy on the website or contact support for further details.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+        <h3>How can I contact you?</h3>
+        <p>You can contact us through the contact page on our website or email us directly at support@ourservice.com.</p>
+    </div>
+</div> 
+<!-- faqs end -->
+  
+      <!-- Footer -->
+      <main style="margin-top: 50px;">
+        <footer>
+         <hr>
+         <div class="footer-container">
+             <div class="footer-section">
+                 <h3 >Ocean Gate</h3>
+                 <p>We are committed to delivering the best marine and oceanic solutions worldwide the best marine and oceanic solutions.</p>
+             </div>
+       
+       
+             <div class="footer-section">
+                 <h3>QUICK LINKS</h3>
+                 <a href="index.html">Home</a>
+                 <a href="product.html">Product</a>
+                 <a href="about.html">About</a>
+                 <a href="contect.html">Contact</a>
+             </div>
+       
+             
+             <div class="footer-section">
+                 <h3>Contact</h3>
+                 <p>Email:asdfg@gmail.com</p>
+                 <p>Phone: +92 3130268012</p>
+                 <div class="footer-icons">
+                     <a href="https://www.facebook.com/login.php/"><img src="https://thumbs.dreamstime.com/b/facebook-logo-vector-eps-file-squared-coloured-easily-editable-have-white-background-high-resolution-255557233.jpg" alt="Facebook Icon"></a>
+                     <a href="https://pk.linkedin.com/"><img src="https://static.vecteezy.com/system/resources/previews/016/716/470/non_2x/linkedin-icon-free-png.png" alt="Twitter Icon"></a>
+                     <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram Icon"></a>
+                 </div>
+                 <br><br>
+                
+             </div>
+             <div class="footer-section footer-location">
+                 <h3>Location</h2>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509354!2d144.95543131558267!3d-37.81720997975144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773f1d9a6df317!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1613995208949!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+             </div>
+         </div>
+       </footer>
+       </main>
+
+</body>
+</html> 
+
+    
