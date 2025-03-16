@@ -1,0 +1,276 @@
+/* Custom Responsive Styles */
+ /* .navbar-brand { font-size: 1.5rem; font-weight: bold;   } */
+ /* .about-section { padding: 50px 20px; }
+ .img-fluid { max-width: 100%; height: auto; }
+ .footer-container { display: flex; flex-wrap: wrap; justify-content: space-around; text-align: center; padding: 20px; background: #333; color: white; }
+ .footer-section { flex: 1; min-width: 250px; padding: 10px; }
+ .footer-icons img { width: 30px; margin: 5px; }
+ iframe { width: 100%; max-width: 300px; height: 200px; } */
+
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+ }
+ /* body {
+   min-height: 100vh;
+   background: url("background.jpg") no-repeat;
+   background-size: cover;
+   background-position: center;
+ } */
+ .header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 100px;
+   background: rgba(0, 0, 0, 0.1);
+   background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+    color: white;
+    /* padding-top: 80px; */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   backdrop-filter: blur(10px);
+   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+   z-index: 100;
+ }
+ .header::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(
+     90deg,
+     transparent,
+     rgba(255, 255, 255, 0.4),
+     transparent
+   );
+   transition: 0.5s;
+ }
+ .header:hover::before {
+   left: 100%;
+ }
+ .logo {
+   color: #fff;
+   font-size: 25px;
+   text-decoration: none;
+   font-weight: 600;
+   cursor: default;
+ }
+ .navbar a {
+   color: #fff;
+   font-size: 18px;
+   text-decoration: none;
+ padding: 10px;
+   transition: 0.3s;
+ }
+ .navbar a:hover {
+   color: #f00;
+ }
+ #menu-icon {
+   font-size: 36px;
+   color: #fff;
+   display: none;
+ }
+ /* BREAKPOINTS */
+ @media (max-width: 992px) {
+   .header {
+     padding: 1.25rem 4%;
+   }
+ }
+ @media (max-width: 768px) {
+   #menu-icon {
+     display: block;
+     margin-left: 60px;
+   }
+   .navbar {
+    background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+    color: white;
+    /* padding-top: 80px; */
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     padding: 0.5rem 4%;
+     display: none;
+     text-align: center;
+ 
+   }
+   .navbar.active {
+     display: block;
+   }
+   .navbar a {
+     display: block;
+     margin: 1.5rem 0;
+   }
+   .nav-bg {
+     position: absolute;
+     top: 79px;
+     left: 0;
+     width: 100%;
+     height: 295px;
+     background: rgba(255, 255, 255, 0.1);
+     background-color: black;
+     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+     backdrop-filter: blur(10px);
+     z-index: 99;
+     display: none;
+   }
+   .nav-bg.active {
+     display: block;
+   }
+ }
+
+ h3{
+  font-size: 35px;
+ }
+
+ body {
+  background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+  color: white;
+}
+.container-reviews {
+font-family: Arial, sans-serif;
+background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+align-items: center;
+}
+.heading {
+padding: 20px;
+/* background-color: #fff; */
+background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+/* box-shadow: 0 4px 8px rgb(255, 255, 255); */
+margin-bottom: 20px;
+text-align: center;
+}
+h1 {
+color: #ffffff;
+}
+
+.reviews {
+  overflow: hidden;
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 20px;
+}
+.card {
+/* background: linear-gradient(to right, #002f4b, #005b96, #0084c2); */
+color: black;
+overflow: hidden;
+
+
+}
+
+
+
+.review-form {
+  overflow: hidden;
+margin: 20px;
+padding: 20px;
+align-items: center;
+box-shadow: 0 4px 8px rgb(255, 255, 255);
+/* background-color: #e5e7eb; */
+background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+border-radius: 12px;
+}
+input, textarea {
+width: 100%;
+padding: 8px;
+margin-bottom: 16px;
+box-sizing: border-box;
+border-radius: 15px;
+background-color: #dcdce1;
+border: none;
+}
+button {
+  overflow: hidden;
+padding: 10px 20px;
+background-color: #000000;
+color: #ffffff;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+button:hover {
+/* background-color: #2563eb; */
+background: linear-gradient(to right, #27546e, #243b4b, #0597db);
+}
+
+ 
+ 
+  /* footer css start */
+footer {
+  background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+        color: white;
+        padding: 20px 0;
+    }
+  
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        height: 250px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+  
+    .footer-section {
+        flex: 2;
+        margin: 10px;
+        min-width: 200px;
+    }
+  
+    .footer-section h3 {
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+  
+    .footer-section p, .footer-section a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 5px 0;
+        display: block;
+    }
+  
+    .footer-icons {
+        display: flex;
+        gap: 10px;
+    }
+  
+    .footer-icons img {
+        width: 32px;
+        height: 32px;
+    }
+  
+    .footer-location iframe {
+        width: 100%;
+        height: 140px;
+        border: 0;
+    }
+  
+  .footer-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: -250%;
+  width: 250%;
+  height: 250%;
+  background: linear-gradient(90deg, transparent, rgba(#002f4b), transparent);
+  transition: 0.5s;
+  }
+  .footer-container:hover::before {
+  left: 100%;
+  } 
+  
+ 
