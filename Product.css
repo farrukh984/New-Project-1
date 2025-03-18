@@ -110,64 +110,18 @@
     display: block;
   }
 }
+li{
+  margin-top: -10px;
+padding: -20px;
+height: 30px;
+margin-bottom: 20px;
+}
 
 h3{
  font-size: 35px;
 }
 
 
- /* footer css start */
-footer {
- background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
-       color: white;
-       padding: 20px 0;
-   }
- 
-   .footer-container {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-       max-width: 1200px;
-       height: 250px;
-       margin: 0 auto;
-       padding: 0 20px;
-   }
- 
-   .footer-section {
-       flex: 2;
-       margin: 10px;
-       min-width: 200px;
-   }
- 
-   .footer-section h3 {
-       border-bottom: 2px solid #ffffff;
-       padding-bottom: 10px;
-       margin-bottom: 15px;
-   }
- 
-   .footer-section p, .footer-section a {
-       color: #ffffff;
-       text-decoration: none;
-       margin: 5px 0;
-       display: block;
-   }
- 
-   .footer-icons {
-       display: flex;
-       gap: 10px;
-   }
- 
-   .footer-icons img {
-       width: 32px;
-       height: 32px;
-   }
- 
-   .footer-location iframe {
-       width: 100%;
-       height: 140px;
-       border: 0;
-   }
- 
          
          
         .product-card {
@@ -248,3 +202,57 @@ Gallery/cd11.webp{
 Gallery/cd11.webp:hover{
     transform: scale(1.05);
 }
+
+
+
+  /* footer css start */
+  footer {
+    background: linear-gradient(to right, #002f4b, #005b96, #0084c2);
+          color: white;
+          padding: 20px 0;
+      }
+    
+      .footer-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          max-width: 1200px;
+          height: 250px;
+          margin: 0 auto;
+          padding: 0 20px;
+      }
+    
+      .footer-section {
+          flex: 2;
+          margin: 10px;
+          min-width: 200px;
+      }
+    
+      .footer-section h3 {
+          border-bottom: 2px solid #ffffff;
+          padding-bottom: 10px;
+          margin-bottom: 15px;
+      }
+    
+      .footer-section p, .footer-section a {
+          color: #ffffff;
+          text-decoration: none;
+          margin: 5px 0;
+          display: block;
+      }
+    
+      .footer-icons {
+          display: flex;
+          gap: 10px;
+      }
+    
+      .footer-icons img {
+          width: 32px;
+          height: 32px;
+      }
+    
+      .footer-location iframe {
+          width: 100%;
+          height: 140px;
+          border: 0;
+      }

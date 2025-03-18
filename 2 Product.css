@@ -99,6 +99,12 @@
     display: block;
     margin: 1.5rem 0;
   }
+  li{
+    margin-top: -10px;
+  padding: -20px;
+  height: 30px;
+  margin-bottom: 20px;
+}
   .nav-bg {
     position: absolute;
     top: 79px;
@@ -173,6 +179,7 @@ footer {
        height: 140px;
        border: 0;
    }
+   
  
          
          
